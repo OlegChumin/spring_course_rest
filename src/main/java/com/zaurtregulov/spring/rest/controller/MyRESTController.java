@@ -45,4 +45,10 @@ public class MyRESTController {
 //        data.setInfo(exception.getMessage());
 //        return new ResponseEntity<>(data, org.springframework.http.HttpStatus.BAD_REQUEST);
 //    }
+
+    @PostMapping("/employees") // http://localhost:8080/api/employees
+    public Employee addNewEmployee(@RequestBody Employee employee) { //jackson
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
 }

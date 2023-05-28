@@ -32,17 +32,17 @@ public class MyRESTController {
         return employee;
     }
 
-    @ExceptionHandler
-    public ResponseEntity<EmployeeIncorrectData> handleException(NuSuchEmployeeException exception) {
-        EmployeeIncorrectData data = new EmployeeIncorrectData();
-        data.setInfo(exception.getMessage());
-        return new ResponseEntity<>(data, org.springframework.http.HttpStatus.NOT_FOUND);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<EmployeeIncorrectData> handleException(Exception exception) {
-        EmployeeIncorrectData data = new EmployeeIncorrectData();
-        data.setInfo(exception.getMessage());
-        return new ResponseEntity<>(data, org.springframework.http.HttpStatus.BAD_REQUEST);
-    }
+//    @ExceptionHandler
+//    public ResponseEntity<EmployeeIncorrectData> handleException(NuSuchEmployeeException exception) {
+//        EmployeeIncorrectData data = new EmployeeIncorrectData();
+//        data.setInfo(exception.getMessage());
+//        return new ResponseEntity<>(data, org.springframework.http.HttpStatus.NOT_FOUND);
+//    }
+//
+//    @ExceptionHandler
+//    public ResponseEntity<EmployeeIncorrectData> handleException(Exception exception) {
+//        EmployeeIncorrectData data = new EmployeeIncorrectData();
+//        data.setInfo(exception.getMessage());
+//        return new ResponseEntity<>(data, org.springframework.http.HttpStatus.BAD_REQUEST);
+//    }
 }
